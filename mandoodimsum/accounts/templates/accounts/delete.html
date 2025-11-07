@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>정말 탈퇴하시겠습니까?</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">회원 탈퇴</button>
+</form>
+
+<a href="{% url 'accounts:profile' %}">취소</a>
+{% endblock %}
